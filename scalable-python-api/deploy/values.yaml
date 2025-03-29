@@ -1,0 +1,4 @@
+auth:
+  database: blazing
+  password: admin
+  username: admin
