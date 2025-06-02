@@ -1,6 +1,6 @@
 <img src="./images/timnology_logo.png" alt="Alt Text"  height="100">
 
-# Timnology YouTube 
+# Timnology YouTube
 
 This repo contains the code for the [Timnology YouTube channel](https://www.youtube.com/@Timnology-r4s/). It is used to demonstrate various concepts in computer science, programming and data engineering.
 The code is free and complete, without gated content. If you find any issues or anything missing, feel free to create a Github Issue.
