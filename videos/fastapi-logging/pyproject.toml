@@ -1,0 +1,13 @@
+[project]
+name = "fastapi-logging"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.12",
+    "httpx>=0.28.1",
+    "loguru>=0.7.3",
+    "sentry-sdk[fastapi]>=2.29.1",
+    "uvicorn[standard]>=0.34.3",
+]
