@@ -15,6 +15,7 @@ Each folder in this repo contains the code for a specific video. The code is org
 
 |Date|Link|Video|
 |---|---|---|
+|Dec 1, 2025|[code](./videos/scalable-python-api/)|[Stop Building 2GB Python Containers](https://youtu.be/Yg0cW-E4tYc)|
 |Oct 31, 2025|[code](./videos/dagster-intro/)|[Dagster 101 — The Core Concepts Explained (In 4 Minutes)](https://youtu.be/k-iQNrtKhjo)|
 |Jul 8, 2025|[code](./videos/fastapi-logging/)|[Mastering FastAPI Logging: From Basics to Production](https://youtu.be/mvkcvsZzUuk)|
 |Mar 27, 2025|[code](./videos/decorators/)|[Mastering Python Decorators: A Deep Dive](https://youtu.be/5zzji_67y5Q)|
