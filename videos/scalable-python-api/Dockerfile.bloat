@@ -1,0 +1,21 @@
+FROM python:3.13
+# Add common debug tools for local troubleshooting
+RUN apt-get update
+RUN apt-get install -y \
+    curl \
+    git \
+    vim \
+    wget \
+    netcat-openbsd \
+    procps
+
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/
+COPY pyproject.toml uv.lock ./
+RUN  uv sync --frozen --no-install-project
+
+COPY src/ /app
+WORKDIR /app
+
+ENV PATH="/app/.venv/bin:$PATH"
+ENV PYTHONPATH="/app/src"
+CMD ["uvicorn", "blazing.main:app", "--host", "0.0.0.0", "--port", "8000"]

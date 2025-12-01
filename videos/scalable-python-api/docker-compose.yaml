@@ -1,0 +1,44 @@
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=timnology_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  dev:
+    build:
+      context: .
+      target: dev 
+    volumes:
+      - ./src:/app/src # Live reload support
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=timnology_db
+      - POSTGRES_HOST=db
+    depends_on:
+      - db
+    
+  prod:
+    build:
+      context: .
+      target: prod 
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=timnology_db
+      - POSTGRES_HOST=db
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
